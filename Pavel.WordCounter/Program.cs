@@ -33,14 +33,14 @@ namespace Pavel.WordCounter
                 }
                 catch (Exception ex)
                 {
+                    //There is not much we could do here, but Let's be gentle, and don't crash the program by rethrow.
+
                     //Let's try to catch all and help user to understand what happened.
                     Console.WriteLine("Exception has occurred:");
                     Console.WriteLine(ex.Message);
 
                     //Log the exception to help ourselves. 
                     Debug.WriteLine(ex);
-
-                    //There is nothing we could do more. Let's be gentle, and don't crash the program by rethrow.
                 }
             }
 
